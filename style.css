@@ -224,6 +224,11 @@ nav {
     transform: translateY(-50%);
     max-width: 550px; 
     z-index: 3;
+        opacity: 0;
+    transition: opacity 300ms ease;
+}
+.project.project:hover .project__description {
+    opacity: 1;
 }
 
 .project__description--title,
