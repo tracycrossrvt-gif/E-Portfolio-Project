@@ -17,6 +17,9 @@ p{
     line-height: 1.5;
     font-size: 16px;
 }
+a {
+    text-decoration: none;
+}
 li{
     list-style: none;
 }
@@ -62,7 +65,6 @@ nav {
 }
 .nav__link--anchor {
     margin: 0 12px;;
-    text-decoration: none;
     font-size: 16px;
     color: #242424;
     font-weight: 700;
@@ -132,7 +134,6 @@ nav {
 .about-me__link {
     font-size: 20px;
     color:#242424;
-    text-decoration: none;
     padding: 0 16px;
 }
 .about-me__img--container {
@@ -186,6 +187,14 @@ nav {
 }
 
 /* Projects */
+
+.project {
+    margin-bottom: 135px;
+}
+
+.project:last-child {
+    margin-bottom: 40px;
+}
 .project__img {
     width: 100%;
     transition: all 500ms ease;
@@ -221,14 +230,30 @@ nav {
     position: absolute;
     top: 50%;
     left: 90px;
-    transform: translateY(-50%);
+    transform: translateY(100%);
     max-width: 550px; 
     z-index: 3;
-        opacity: 0;
-    transition: opacity 300ms ease;
+    opacity: 0;
+    transition: transform 450ms; 
+    opacity: 300ms;
 }
-.project.project:hover .project__description {
+.project:hover .project__description {
     opacity: 1;
+    transform: translateY(-50%)
+}
+
+.project__description--title {
+    font-size: 40 px;
+}
+
+.project__description--para {
+    margin: 16px 0;
+}
+
+.project__description--link {
+   font-size: 20px; 
+   margin-right: 16px;
+   text-decoration: none;
 }
 
 .project__description--title,
@@ -237,6 +262,42 @@ nav {
 .project__description--link {
    text-align: left;
     color: #fff;   
+}
+
+.project:hover .project__description {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #242424;
+}
+
+.footer__logo {
+   margin-bottom: 20px; 
+}
+.footer__social--list {
+    width: 100%:
+    max-width: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 28px;
+}
+.footer__row {
+    padding: 8% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer__logo--img {
+    width: 70px;
+    height: 70px;
+}
+.footer__social--link,
+.footer__copyright {
+    color: #fff;
+    
 }
   
 
