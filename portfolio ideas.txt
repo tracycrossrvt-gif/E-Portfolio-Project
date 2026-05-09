@@ -1,0 +1,30 @@
+# Portfolio Notes
+
+## Navbar
+- Keep navbar clean/minimal
+- Use Mothman logo
+- Subtle hover glow
+- Slight translateY hover effect
+- Add dark mode support later
+
+## Dark Theme
+Potential logo filter:
+
+.dark-theme .nav__logo--img {
+  filter:
+    brightness(1.15)
+    drop-shadow(0 0 12px rgba(255, 59, 59, 0.25));
+}
+
+## Future Improvements
+- Animate Mothman eyes
+- SVG logo version
+- Add favicon
+- Add loading animation
+
+## Site Aesthetic
+- Appalachian gothic
+- Modern SaaS
+- Charcoal background
+- Off-white typography
+- Muted purple glow
