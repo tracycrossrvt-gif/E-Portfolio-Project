@@ -39,6 +39,7 @@ section {
 
 .container {
     padding: 50px 0;
+    width: 100%;
 }
 
 .row {
@@ -64,7 +65,15 @@ section {
 
 .purple {
    color: #B497FF;
+}
 
+.purple__hover {
+    transition: all 300ms ease;
+}
+
+.purple__hover:hover {
+    color: #B497FF;
+    text-shadow: 0 0 12px rgba(180, 151, 255, 0.35);
 }
 
 /* LANDING PAGE */
@@ -317,4 +326,34 @@ nav {
 .project__wrapper:hover .project__img {
     transform: scale(1.07);
     filter: blur(5px)
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1A1A1A;
+    display: flex;
+    padding: 6% 0;
+}
+
+.footer__row {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.footer__logo--img {
+   width: 70px;
+}
+
+
+.footer__social--link, .footer__copyright {
+    color: white;
+}
+
+.footer__social--list {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 28px 0;
 }
