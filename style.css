@@ -37,6 +37,38 @@ section {
     background-color: #1A1A1A;
 }
 
+input, textarea {
+   width: 100%;
+   background-color: #242424;
+   color:#D6D1C7;
+   outline: none;
+   border: 1px solid #D6D1C7;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   height: 40px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 8px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input:hover, textarea:hover {
+    border-color: #B497FF;
+    transition: all 300ms ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #B497FF;
+    transition: all 300ms ease;
+}
 .container {
     padding: 50px 0;
     width: 100%;
@@ -51,6 +83,7 @@ section {
 
 .click {
     transition:all 300ms ease;
+    cursor: pointer;
 }
 
 .click:active {
@@ -283,6 +316,11 @@ nav {
 
 .modal__half {
   width: 50%;
+  padding: 40px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .modal__contact {
@@ -310,10 +348,11 @@ nav {
 
 .modal__sub-title {
     margin: 12px 0 24px 0;
+    font-size: 14px;;
 }
 
 .modal__about--para {
-    line-height: 1.8;
+    line-height: 0.8;
 }
 
 .skills__list {
@@ -372,6 +411,81 @@ nav {
     100% {
         transform: translateY(0) scale(1);
     }
+}
+
+.form__item {
+  margin-bottom: 20px;
+}
+
+.form__submit {
+    background: #B497FF;
+    border: 2px solid #B497FF;
+    color: #D6D1C7;
+    font-weight: bold;
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 20px;
+    transition: all 300ms ease;
+}
+
+.form__submit:hover {
+    background: transparent;
+    color: #B497FF;
+    border: 2px solid #B497FF;
+    transition: all 300ms ease;
+}
+
+.form__submit:active {
+   border-color: #B497FF; 
+   color: #B497FF
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;justify-content: center;
+}
+
+.modal__overlay--loading {
+   background-color: #242424; 
+    font-size: 80px;
+    z-index: -1;
+}
+
+.modal__overlay--success {
+    background-color: #B497FF;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px;
+}
+
+.fa-spinner {
+    color: #D6D1C7;
+    animation: spinner 750ms linear infinite;
+}
+@keyframes spinner {
+    0 {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color:#242424;
+    font-size: 36px;
+    z-index: 100;
 }
 
 /* PROJECTS */

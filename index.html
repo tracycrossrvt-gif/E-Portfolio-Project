@@ -109,14 +109,6 @@
       I bring a unique combination of frontend development, operational leadership, and real-world problem solving, with experience managing teams, improving workflows, and <b class="purple">building systems</b> designed around the people who use them.
     </p>
 
-  </div>
-
-  <div class="modal__half modal__languages">
-
-    <h3 class="modal__title modal__title--languages">
-      My Tech Stack
-    </h3>
-
     <div class="skills__list">
 
       <div class="skill">
@@ -160,16 +152,42 @@
         </figure>
         <span class="skill__name">VS Code</span>
       </div>
-
+       </div>
     </div>
-
-  </div>
-  
-
-</div>
-      <div class="modal__half modal__contact">Get in touch!</div>   
-    </div>
-  </section>  
+      <div class="modal__half modal__contact">
+        <h3 class="modal__title modal__title--contact">
+          Get in touch!
+        </h3>
+        <h4 class="modal__sub-title modal__sub-title--contact">
+          I'd love to hear from you!
+        </h4>
+        <form id="contact__form" action="">
+          <div class="form__item">
+            <label class="form__item--label">Name</label>
+            <input class="input" name="user_name" type="text" required></input>
+          </div>  
+           <div class="form__item">
+            <label class="form__item--label">Email</label>
+            <input class="input" name="user_email" type="email" required></input>
+          </div>  
+           <div class="form__item">
+            <label class="form__item--label">Message</label>
+            <textarea class="input" name="message" type="text" required></textarea>
+          </div> 
+           <button id="contact__submit" class="form__submit">
+          Send
+         </button> 
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+           <i class="fa-solid fa-spinner"></i> 
+        </div>
+        <div class="modal__overlay modal__overlay--success">
+          Thanks for the message! I'll be in touch soon.
+        </div>
+      </div>   
+    <i class="fa-solid fa-x modal__exit click"></i>
+      </div>
+</section>  
   <section id="projects">
     <div class="container">
         <div class="row">
