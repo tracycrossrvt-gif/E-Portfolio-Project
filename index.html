@@ -47,7 +47,7 @@
                 purple__hover
                 purple__hover--black
                 ">Projects</a>
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                 <a href="" class="
                 nav__link--anchor
                 purple__hover
@@ -58,13 +58,14 @@
                 nav__link--anchor
                 purple__hover
                 purple__hover--black
-                "><li class="nav__link">
-                <a href="" class="
-                nav__link--anchor
-                purple__hover
-                purple__hover--black
-                "><i class="fa-regular fa-moon"></i>
-            </li>
+                ">
+                </a>
+             <li class="nav__link">
+  <button type="button" class="theme__toggle" onclick="toggleContrast()">
+    <i class="fa-regular fa-moon"></i>
+  </button>
+</li>   
+                
         </ul>
     </nav>
     <header class="header">
@@ -74,7 +75,7 @@
         <p class="header__para">
             <b class="purple">Frontend Developer,</b> Business Operations Professional, and Systems Thinker building clean, intelligent, human-centered digital experiences with a focus on intuitive, easy-to-use design. After two decades in corporate leadership, I transitioned into tech to create thoughtful interfaces inspired by real-world systems, immersive storytelling, and operational problem solving—designing technology that feels both functional and deeply intentional. 
             <br>
-            Here's what you need to know <b class="purple">about me.</b>
+            Here's what you need to know <b class="purple" onclick="toggleModal()">about me.</b>
         </p>
         <div class="social__list">
           <a href="https://www.linkedin.com/in/tracy-cross" target="_blank" class="social__link click">
@@ -89,7 +90,7 @@
         </div>
        </div> 
     </header>
-    <button class="mail__btn click">
+    <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-regular fa-envelope"></i>
     </button>
     <a href="#projects" class="scroll">
@@ -165,6 +166,7 @@
        </div>
     </div>
       <div class="modal__half modal__contact">
+         <i class="fa-solid fa-x modal__exit click" ></i>
         <h3 class="modal__title modal__title--contact">
           Get in touch!
         </h3>
@@ -194,8 +196,13 @@
         <div class="modal__overlay modal__overlay--success">
           Thanks for the message! I'll be in touch soon.
         </div>
+        <div class="modal__overlay modal__overlay--error">
+  Email service temporarily unavailable.
+  <br><br>
+  Please contact me directly at tracycrossrvt@gmail.com
+</div>
       </div>   
-    <i class="fa-solid fa-x modal__exit click"></i>
+   
       </div>
 </section>  
   <section id="projects">
@@ -236,59 +243,81 @@
     </div>
   </div>
 </li>
-             <li class="project">
-               <div class="project__wrapper">
-                <img src="./assets/vetkpiproject.png" class="project__img" alt="">
-                <div class="project__wrapper--background">    
-                </div>
-               <div class="project__description">
-                <h3 class="project__description--title">
-                    Veterinary KPI Helper
-                </h3>
-                    <h4 class="project__description--sub-title">
-                       HTML, CSS, JavaScript, Vue, Vuex 
-                    </h4>
-               <p class="project__description--para">
-                  A veterinary operations dashboard designed to help practice owners and managers identify inefficiencies through revenue, appointments, labor, COGS, and average client transaction data, delivering actionable insights through clean, data-driven design.
-               </p>
-               <div class="project__description--links">
-                <a href="#" class="project__description--link">
-                  <i class="fa-brands fa-square-github"></i>  
-                </a>
-                <a href="#" class="project__description--link">
-                  <i class="fas fa-link"></i>  
-                </a>
-               </div>
-               </div>
-               </div>
-                </div> 
-             </li> 
-             <li class="project">
-               <div class="project__wrapper">
-                <img src="./assets/vetwellnessapp.png" class="project__img" alt="">
-                <div class="project__wrapper--background">    
-                </div>
-               <div class="project__description">
-                <h3 class="project__description--title">
-                    Veterinary Wellness App
-                </h3>
-                    <h4 class="project__description--sub-title">
-                       HTML, CSS, JavaScript, Vue, Vuex 
-                    </h4>
-               <p class="project__description--para">
-                   A wellness-focused app for veterinary professionals, offering mindfulness exercises, mental health resources, and pet-friendly places to recharge while traveling or exploring locally, designed to support balance, recovery, and emotional wellbeing in a demanding industry. </p>
-               <div class="project__description--links">
-                <a href="#" class="project__description--link">
-                  <i class="fa-brands fa-square-github"></i>  
-                </a>
-                <a href="#" class="project__description--link">
-                  <i class="fas fa-link"></i>  
-                </a>
-               </div>
-               </div>
-               </div>
-                </div> 
-             </li> 
+  <li class="project">
+  <div class="project__wrapper">
+
+    <img src="./assets/vetkpiproject.png" class="project__img" alt="">
+
+    <div class="project__wrapper--background"></div>
+
+    <div class="project__description">
+
+      <h3 class="project__description--title">
+        Veterinary KPI Helper
+      </h3>
+
+      <h4 class="project__description--sub-title">
+        HTML, CSS, JavaScript, Vue, Vuex
+      </h4>
+
+      <p class="project__description--para">
+        A veterinary operations dashboard designed to help practice owners and managers identify inefficiencies through revenue, appointments, labor, COGS, and average client transaction data, delivering actionable insights through clean, data-driven design.
+      </p>
+
+      <div class="project__description--links">
+
+        <a href="#" class="project__description--link">
+          <i class="fa-brands fa-square-github"></i>
+        </a>
+
+        <a href="#" class="project__description--link">
+          <i class="fas fa-link"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</li>
+
+<li class="project">
+  <div class="project__wrapper">
+
+    <img src="./assets/vetwellnessapp.png" class="project__img" alt="">
+
+    <div class="project__wrapper--background"></div>
+
+    <div class="project__description">
+
+      <h3 class="project__description--title">
+        Veterinary Wellness App
+      </h3>
+
+      <h4 class="project__description--sub-title">
+        HTML, CSS, JavaScript, Vue, Vuex
+      </h4>
+
+      <p class="project__description--para">
+        A wellness-focused app for veterinary professionals, offering mindfulness exercises, mental health resources, and pet-friendly places to recharge while traveling or exploring locally, designed to support balance, recovery, and emotional wellbeing in a demanding industry.
+      </p>
+
+      <div class="project__description--links">
+
+        <a href="#" class="project__description--link">
+          <i class="fa-brands fa-square-github"></i>
+        </a>
+
+        <a href="#" class="project__description--link">
+          <i class="fas fa-link"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</li>            
             </ul>
         </div>
     </div>
