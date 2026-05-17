@@ -194,6 +194,102 @@ color:#1F1F1F;
 
 #landing-page {
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.celestial {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 200ms ease-out;
+}
+
+
+nav,
+.header {
+  position: relative;
+  z-index: 1;
+}
+
+.celestial--moon {
+  top: 18%;
+  right: 12%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: -14px 0 0 #D6D1C7;
+  opacity: 0.35;
+}
+
+.celestial--star {
+  width: 6px;
+  height: 6px;
+  background-color: #D6D1C7;
+  border-radius: 50%;
+  opacity: 0.45;
+  animation: twinkle 2.5s infinite ease-in-out;
+}
+
+.celestial--star-1 {
+  top: 22%;
+  left: 18%;
+}
+
+.celestial--star-2 {
+  top: 38%;
+  right: 24%;
+  animation-delay: 700ms;
+}
+
+.celestial--star-3 {
+  bottom: 24%;
+  left: 34%;
+  animation-delay: 1200ms;
+}
+
+.celestial--comet {
+  top: 28%;
+  left: -120px;
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #B497FF);
+  opacity: 0.45;
+  transform: rotate(-18deg);
+  animation: comet 8s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.4);
+  }
+}
+
+@keyframes comet {
+  0% {
+    transform: translateX(0) translateY(0) rotate(-18deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateX(120vw) translateY(180px) rotate(-18deg);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .header {
@@ -678,6 +774,8 @@ footer {
     background-color: #1A1A1A;
     display: flex;
     padding: 6% 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .footer__row {
@@ -700,4 +798,32 @@ footer {
     justify-content: center;
     gap: 32px;
     margin: 28px 0;
+}
+.celestial--footer-star-1,
+.celestial--footer-star-2 {
+  width: 4px;
+  height: 4px;
+  background-color: #D6D1C7;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.celestial--footer-star-1 {
+  top: 24%;
+  left: 18%;
+}
+
+.celestial--footer-star-2 {
+  bottom: 28%;
+  right: 22%;
+}
+
+.celestial--footer-moon {
+  top: 18%;
+  right: 10%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: -8px 0 0 #D6D1C7;
+  opacity: 0.15;
 }

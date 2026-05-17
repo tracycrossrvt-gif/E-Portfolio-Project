@@ -46,3 +46,54 @@ function toggleModal() {
     document.body.classList += ' modal--open';
 }
 
+const landing = document.querySelector("#landing");
+const celestials = document.querySelectorAll(".celestial");
+
+landing.addEventListener("mousemove", (event) => {
+  const rect = landing.getBoundingClientRect();
+
+  const x = (event.clientX - rect.left) / rect.width - 0.5;
+  const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+  celestials.forEach((celestial, index) => {
+    const movement = (index + 1) * 8;
+
+    celestial.style.transform = `
+      translate(${x * movement}px, ${y * movement}px)
+    `;
+  });
+});
+
+landing.addEventListener("mouseleave", () => {
+  celestials.forEach((celestial) => {
+    celestial.style.transform = "translate(0, 0)";
+  });
+});
+
+const footer = document.querySelector("footer");
+
+const footerCelestials = document.querySelectorAll(
+  ".celestial--footer-star-1, .celestial--footer-star-2, .celestial--footer-moon"
+);
+
+footer.addEventListener("mousemove", (event) => {
+  const rect = footer.getBoundingClientRect();
+
+  const x = (event.clientX - rect.left) / rect.width - 0.5;
+  const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+  footerCelestials.forEach((celestial, index) => {
+    const movement = (index + 1) * 2;
+
+    celestial.style.transform = `
+      translate(${x * movement}px, ${y * movement}px)
+    `;
+  });
+});
+
+footer.addEventListener("mouseleave", () => {
+  footerCelestials.forEach((celestial) => {
+    celestial.style.transform = "translate(0, 0)";
+  });
+});
+
