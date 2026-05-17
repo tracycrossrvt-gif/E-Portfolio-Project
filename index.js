@@ -34,17 +34,10 @@ async function contact(event) {
 }
 
 
-let isModalOpen = false;
 function toggleModal() {
-
-    if (isModalOpen) {
-        isModalOpen = false;
-        return document.body.classList.remove('modal--open');
-      
-    }
-    isModalOpen = true;
-    document.body.classList += ' modal--open';
+  document.body.classList.toggle("modal--open");
 }
+
 
 const landing = document.querySelector("#landing");
 const celestials = document.querySelectorAll(".celestial");

@@ -10,6 +10,10 @@
    color: #F5F1E8;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a, button{
      text-decoration: none;
      cursor: pointer;
@@ -69,6 +73,21 @@ input:hover, textarea:hover {
 input:focus, textarea:focus {
     border-color: #B497FF;
     transition: all 300ms ease;
+}
+
+
+.nav__link--anchor,
+.footer__social--link {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.nav__link--anchor,
+.footer__social--link,
+.theme__toggle {
+  font-family: inherit;
 }
 
 .container {
@@ -192,7 +211,7 @@ color:#1F1F1F;
 
 /* LANDING PAGE */
 
-#landing-page {
+#landing {
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -458,7 +477,7 @@ nav {
 
 /* MODAL */
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -466,7 +485,6 @@ nav {
   max-width: 1100px;
   height: 700px;
   border-radius: 20px;
-  overflow: hidden;
   display: flex;
   visibility: hidden;
   transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
@@ -840,19 +858,28 @@ footer {
     }
 
     .modal {
+        max-height: 100vh;
         top:0;
         left: 0;
-        height:auto;
+        height: auto;
         transform: none;
         width: 100%;
         flex-direction: column-reverse;
         border-radius: 0;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .modal__half {
         width: 100%;
 
     }
+
+    .modal__contact,
+    .modal__about {
+    width: 100%;
+    transform: none;
+}  
 }
 
 /* Small screens */
@@ -883,6 +910,12 @@ footer {
     .project__description--sub-title {
         margin-bottom: 8px;
     }
+
+    .modal {
+  overflow-y: auto;
+  max-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+}
 
     .modal__half {
         padding: 40px;

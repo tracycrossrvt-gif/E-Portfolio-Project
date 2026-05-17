@@ -19,7 +19,7 @@
   <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
-<script src="index.js"></script>
+<script src="index.js" defer></script>
 <script type="text/javascript">
    (function(){
       emailjs.init({
@@ -29,50 +29,43 @@
 </script>
 </head>
 <body>
-  <section id="landing-page">
+  <section id="landing">
     <div class="celestial celestial--moon"></div>
 <div class="celestial celestial--star celestial--star-1"></div>
 <div class="celestial celestial--star celestial--star-2"></div>
 <div class="celestial celestial--star celestial--star-3"></div>
 <div class="celestial celestial--comet"></div>
     <nav>
-        <figure>
-           <img id="personal-logo" src="./assets/mothman-logo-main.png" alt=""> 
-        </figure>
-        <ul class="nav__link--list">
-            <li class="nav__link"  onclick="toggleModal()">
-                <a href="" class="
-                nav__link--anchor
-                purple__hover
-                purple__hover--black
-                ">About</a>
-                <li class="nav__link">
-                <a href="#" class="
-                nav__link--anchor
-                purple__hover
-                purple__hover--black
-                ">Projects</a>
-                <li class="nav__link" onclick="toggleModal()">
-                <a href="" class="
-                nav__link--anchor
-                purple__hover
-                purple__hover--black
-                ">Contact</a>
-                <li class="nav__link click">
-                <a href="" class="
-                nav__link--anchor
-                purple__hover
-                purple__hover--black
-                ">
-                </a>
-             <li class="nav__link">
-  <button type="button" class="theme__toggle" onclick="toggleContrast()">
-    <i class="fa-regular fa-moon"></i>
-  </button>
-</li>   
-                
-        </ul>
-    </nav>
+  <figure>
+    <img id="personal-logo" src="./assets/mothman-logo-main.png" alt="">
+  </figure>
+
+  <ul class="nav__link--list">
+    <li class="nav__link">
+      <button type="button" class="nav__link--anchor purple__hover purple__hover--black" onclick="toggleModal()">
+        About
+      </button>
+    </li>
+
+    <li class="nav__link">
+      <a href="#projects" class="nav__link--anchor purple__hover purple__hover--black">
+        Projects
+      </a>
+    </li>
+
+    <li class="nav__link">
+      <button type="button" class="nav__link--anchor purple__hover purple__hover--black" onclick="toggleModal()">
+        Contact
+      </button>
+    </li>
+
+    <li class="nav__link">
+      <button type="button" class="theme__toggle" onclick="toggleContrast()">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </li>
+  </ul>
+</nav>
     <header class="header">
        <div class="header__content">
         <h1 class="title">Greetings!</h1>
@@ -95,6 +88,8 @@
         </div>
        </div> 
     </header>
+    <a href="#" class="">
+        <div class="scroll__icon click"></div>
     <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-regular fa-envelope"></i>
     </button>
@@ -171,7 +166,7 @@
        </div>
     </div>
       <div class="modal__half modal__contact">
-         <i class="fa-solid fa-x modal__exit click" ></i>
+         <i class="fa-solid fa-x modal__exit click" onclick="toggleModal()"></i>
         <h3 class="modal__title modal__title--contact">
           Get in touch!
         </h3>
@@ -368,20 +363,20 @@
           LinkedIn
         </a>
 
-        <a
-          href="#"
-          target="_blank"
-          class="
-            footer__social--link
-            purple__hover
-            purple__hover--white
-          "
-        >
-          Contact
-        </a>
+       <button
+  type="button"
+  onclick="toggleModal()"
+  class="
+    footer__social--link
+    purple__hover
+    purple__hover--white
+  "
+>
+  Contact
+</button>
 
         <a
-          href="#"
+          href="#" onclick="toggleModal()"
           target="_blank"
           class="
             footer__social--link
