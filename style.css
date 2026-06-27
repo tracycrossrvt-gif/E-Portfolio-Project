@@ -418,6 +418,8 @@ nav {
     margin: 0 auto;
     height: 100px;
     padding: 0 20px;
+    position: relative;
+    z-index: 20;
 }
 
 #personal-logo {
@@ -849,7 +851,7 @@ footer {
 
 /* Small phones, tablets, large smart phones */
 @media (max-width: 768px) {
-    .titel {
+    .title {
         font-size: 80px;
     }
 
@@ -880,6 +882,20 @@ footer {
     width: 100%;
     transform: none;
 }  
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project__img {
+    height: 320px;
+    object-fit: contain;
+    background-color: #1a1a1a;
+  }
 }
 
 /* Small screens */
@@ -920,4 +936,24 @@ footer {
     .modal__half {
         padding: 40px;
     }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding-top: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project__img {
+    height: 260px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    position: relative;
+    z-index: 20;
+  }
 }
